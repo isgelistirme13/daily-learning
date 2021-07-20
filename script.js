@@ -1577,10 +1577,10 @@ choice.addEventListener('click',function(e){
     //Change the content of the questions
     if(orderQuestion===1){
         question.innerHTML=question2.question
-        choice1.setAttribute('value', question2.choice[0])
-        choice2.setAttribute('value', question2.choice[1])
-        choice3.setAttribute('value', question2.choice[2])
-        choice4.setAttribute('value', question2.choice[3])
+        for(const i = 1; i < 5; i++ ) {
+          ['choice'+i].setAttribute('value', question2.choice[i])
+        }
+        
         questionCount.innerHTML='Question 2/5'
     }
     if(orderQuestion===2){
